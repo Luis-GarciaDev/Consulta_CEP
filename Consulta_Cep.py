@@ -20,13 +20,11 @@ match escolha:
         cep = input("Digite o cep: ")
         url = requests.get(f"https://viacep.com.br/ws/{cep}/json/")
 
+# TM.SLEEP PARA ALGUNS PONTOS DO CÓDIGO
 tm.sleep(1)
 tm.sleep(1)
 
 "QUAIS ALTERAÇÕES FAZER ANTES DO COMMIT: "
-#1- COLOQUE UMA MENSAGEM DE STATUS DE CONEXÃO COM BASE NO CÓDIGO RECEBIDO
-#2- COLOQUE TM.SLEEP PARA ALGUNS PONTOS DO CÓDIGO
-#3- COLOQUE O OS.SYSTEM("CLS") PARA LIMPAR A TELA
 
 status = url.status_code
 
@@ -34,6 +32,7 @@ status = url.status_code
 
 tm.sleep(1)
 tm.sleep(1)
+# OS.SYSTEM("CLS") PARA LIMPAR A TELA
 os.system("cls")
 print("Status: ",url.status_code)
 tm.sleep(1)
@@ -41,6 +40,7 @@ tm.sleep(1)
 tm.sleep(1)
 os.system("cls")
 
+# MENSAGENS DE STATUS DE CONEXÃO COM BASE NO STATUS CODE RECEBIDO
 match status:
     case s if 200 <= s < 300:
         print("Conexão estabelecida com sucesso")
