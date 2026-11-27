@@ -21,23 +21,15 @@ match escolha:
         url = requests.get(f"https://viacep.com.br/ws/{cep}/json/")
 
 # TM.SLEEP PARA ALGUNS PONTOS DO CÓDIGO
-tm.sleep(1)
-tm.sleep(1)
+tm.sleep(2)
 
-"QUAIS ALTERAÇÕES FAZER ANTES DO COMMIT: "
+status = url.status_code #VAI RETORNAR O CÓDIGO DA API
 
-status = url.status_code
-
-        
-
-tm.sleep(1)
-tm.sleep(1)
+tm.sleep(2)
 # OS.SYSTEM("CLS") PARA LIMPAR A TELA
 os.system("cls")
 print("Status: ",url.status_code)
-tm.sleep(1)
-tm.sleep(1)
-tm.sleep(1)
+tm.sleep(3)
 os.system("cls")
 
 # MENSAGENS DE STATUS DE CONEXÃO COM BASE NO STATUS CODE RECEBIDO
@@ -50,13 +42,9 @@ match status:
         print("Erro usuário")
     case s if 500 <= s:
         print("Erro Servidor")
-tm.sleep(1)
-tm.sleep(1)
-tm.sleep(1)
+tm.sleep(3)
 os.system("cls")
-tm.sleep(1)
-tm.sleep(1)
-tm.sleep(1)
+tm.sleep(3)
 
 print(url.json())
 
