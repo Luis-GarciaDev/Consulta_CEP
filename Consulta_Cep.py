@@ -23,7 +23,7 @@ match escolha:
 # TM.SLEEP PARA ALGUNS PONTOS DO CÓDIGO
 tm.sleep(2)
 
-status = url.status_code #VAI RETORNAR O CÓDIGO DA API
+status = url.status_code #VAI RETORNAR O CÓDIGO DE STATUS DA CONEXÃO COM A API
 
 tm.sleep(2)
 # OS.SYSTEM("CLS") PARA LIMPAR A TELA
